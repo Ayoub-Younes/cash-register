@@ -6,19 +6,19 @@
 
 @font-face {
   font-family: 'Arcade Regular'; 
-  src: url('fonts/Arcade Regular.TTF'); 
+  src: url('fonts/Arcade Regular.TTF'), url('https://res.cloudinary.com/dmf7frt4a/raw/upload/v1725278976/Arcade_Regular_uvchxs.TTF'); 
 }
 @font-face {
   font-family: 'digital'; 
-  src: url('fonts/digital-7.ttf'); 
+  src: url('fonts/digital-7.ttf'), url('https://res.cloudinary.com/dmf7frt4a/raw/upload/v1725278975/digital-7_etj6il.ttf'); 
 }
 @font-face {
   font-family: 'square_sans_serif'; 
-  src: url('fonts/square_sans_serif_7.ttf'); 
+  src: url('fonts/square_sans_serif_7.ttf'), url('https://res.cloudinary.com/dmf7frt4a/raw/upload/v1725278975/square_sans_serif_7_qavwf9.ttf'); 
 }
 @font-face {
   font-family: 'dollar'; 
-  src: url('fonts/dollar.ttf'); 
+  src: url('fonts/dollar.ttf'), url('https://res.cloudinary.com/dmf7frt4a/raw/upload/v1725278975/dollar_bro8o0.ttf'); 
 }
 
 html {
@@ -29,7 +29,7 @@ html {
 
 body {
   height: 100vh;
-  background-image: url('imgs/background.jpg');
+  background-image: url('imgs/background.jpg'), url('https://raw.githubusercontent.com/Ayoub-Younes/build-a-cash-register/master/imgs/background.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
