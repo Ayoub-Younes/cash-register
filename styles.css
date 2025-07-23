@@ -85,7 +85,7 @@ input {
   display: flex;
   justify-content: center;
   width: 80%;
-  height: auto;
+  height: 1.5em;
   padding: 0.25em;
   border: 2px solid rgb(69, 69, 69);
   outline: none;
