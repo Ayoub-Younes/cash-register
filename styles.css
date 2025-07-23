@@ -85,8 +85,8 @@ input {
   display: flex;
   justify-content: center;
   width: 80%;
-  height: 100%;
-  padding: 10px;
+  height: auto;
+  padding: 0.25em;
   border: 2px solid rgb(69, 69, 69);
   outline: none;
   color: rgb(69, 69, 69);
