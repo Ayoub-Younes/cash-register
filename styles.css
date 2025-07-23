@@ -32,10 +32,13 @@ body {
   font-size: clamp(0.5em, 3vw, 0.95em) ;
   height: 100%;
   width: 100%;
-  height: auto;
-  min-height: 100vh;
-  width: 100%;  text-align: center;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 #background-img {
   position: fixed;
@@ -84,15 +87,16 @@ input {
   justify-content: center;
   width: 80%;
   height: auto;
-  min-height: 1.5em;
+  min-height: 2em;
   padding: 0.25em;
-  border: 2px solid rgb(69, 69, 69);
   outline: none;
+  border: 2px solid rgb(69, 69, 69);
   color: rgb(69, 69, 69);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: "digital", cursive;
   font-size: 2em;
   border-radius: 5px;
+  line-height: 1.2;
 }
 
 input:focus {
