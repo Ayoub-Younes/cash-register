@@ -66,7 +66,7 @@ return text;
 } else {
     changeDue.innerHTML = '<p class="black">Status: INSUFFICIENT_FUNDS</p>';
 }
-console.log(cid);
+
 }
 let text  = changeDue.innerHTML.replace(/\s$/,"");
 changeDue.innerHTML = text;
@@ -74,4 +74,38 @@ cid = [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ON
 }
 
 purchaseBtn.addEventListener("click",drawerCheck)
+cash.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    drawerCheck();
+  }
+});
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const img = document.getElementById('background-img');
+    const mainContent = document.body;
+
+    let imageLoaded = false;
+
+    function showContent() {
+      mainContent.style.display = 'flex';
+    }
+
+    if (img.complete) {
+      imageLoaded = true;
+      showContent();
+    } else {
+
+      img.onload = function() {
+        imageLoaded = true;
+        showContent();
+      };
+    }
+
+    // Fallback in case the image takes too long or fails to load
+    setTimeout(function() {
+      if (!imageLoaded) {
+        showContent();
+      }
+    }, 3000);
+  });
