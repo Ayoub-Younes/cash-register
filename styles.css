@@ -22,18 +22,16 @@
 }
 
 html {
-  background: linear-gradient(#bbbabd, #282527);
+  height: 100%;
+  width: 100%;
   font-family: "Arcade Regular", cursive;
   font-size: 20px;
 }
 
 body {
-  height: 100vh;
-  background-image: url('imgs/background.jpg'), url('https://raw.githubusercontent.com/Ayoub-Younes/build-a-cash-register/master/imgs/background.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 1600px 800px;
+  font-size: clamp(0.5em, 3vw, 1em) ;
+  height: 100%;
+  width: 100%;
   padding: 0;
   text-align: center;
   display: flex;
@@ -41,8 +39,20 @@ body {
   align-items: center;
 }
 
+#background-img {
+  position: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .container {
+  max-width: 600px; 
+  width: 90%; 
+  margin: auto;
   display: flex;
+  gap: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -50,38 +60,38 @@ body {
   background-color: rgba(255, 255, 255, 0.9); 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px; 
-  width: 90%; 
+
 }
 
-.container img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.container h2, .container p {
-  margin-bottom: 15px;
-  font-size: 1.5em;
+.container h2 {
+  color: #222;
+  margin: 0.5em auto;
+  font-size: 2.5em;
 }
 
 #price {
-  font-family: 'square_sans_serif';
+  font-family: "dollar";
   width: 80%;
-  margin: 20px 0;
-  color: black;
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 1.3em;
+}
+
+.input-text {
+  font-size: 1.4em; 
 }
 
 input {
   width: 80%;
   padding: 10px;
-  margin: 10px 0;
   border: 2px solid rgb(69, 69, 69);
   outline: none;
   color: rgb(69, 69, 69);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: "digital", cursive;
-  font-size: 1.2em;
+  font-size: 2em;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 input:focus {
@@ -92,7 +102,8 @@ input:focus {
 #purchase-btn {
   padding: 10px 20px;
   font-family: "Arcade Regular", cursive;
-  font-size: large;
+  font-size: 1.2em;
+  letter-spacing: 1px;
   border-radius: 20px;
   background-color: rgba(29, 29, 29, 0.7);
   color: #ffffff;
@@ -109,9 +120,13 @@ input:focus {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+  word-wrap: break-word;
 }
 
 #drawer , #change-due{
+  flex: 1;
+  font-size: 1em;
   width: 100%;
   margin: 20px 10px;
   padding: 20px;
@@ -124,30 +139,37 @@ input:focus {
   text-align: left;
   font-family: 'dollar';
   font-weight: 100;
-  font-size: medium;
   margin: 5px 0px;
   color: rgb(85, 84, 84);
 }
+
+
 #drawer .black, #change-due .black{
   margin-bottom: 15px;
   font-family: 'Arcade Regular';
   font-weight: 900;
-  font-size: x-large;
-  color: black;
+  font-size: 1.2em;
+  color: #222;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .container h2, .container p {
-    font-size: 1.2em;
-  }
-
-  input {
-    font-size: 1em;
-  }
-
-  #purchase-btn {
-    padding: 8px 15px;
-    font-size: 1em;
-  }
+.cash {
+  font-size: 0.8em;
 }
+
+/*
+@media screen and (max-width: 490px) {
+
+  #purchase-container {
+  flex-direction: column-reverse;
+}
+  
+#drawer .black, #change-due .black{
+  font-size: 1.5em;
+}
+
+.cash {
+  font-size: 1em;
+}
+
+}
+*/

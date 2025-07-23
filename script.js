@@ -7,9 +7,9 @@ const drawer = document.getElementById("drawer");
 let price = 2;
 let cid = [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]];
 
-itemPrice.innerText = `Item price: ${price}$`;
+itemPrice.innerText = `ITEM PRICE: ${price}$`;
 drawer.innerHTML= '<p class="black">Change in drawer:</p>'
-cid.forEach(ar => drawer.innerHTML += `<p>${ar[0]}: $${ar[1]}</p>`);
+cid.forEach(ar => drawer.innerHTML += `<p  class="cash">${ar[0]}: $${ar[1]}</p>`);
 
 
 //Function check
@@ -55,7 +55,7 @@ if (d === 0){
   console.log(chashleft);
   const display = arr => {
    let text = "";
-arr.forEach(ar => text += `<p>${ar[0]}: $${ar[1]}</p>`);
+arr.forEach(ar => text += `<p class="cash">${ar[0]}: $${ar[1]}</p>`);
 return text;
  }
   if(chashleft === 0){
